@@ -1,0 +1,32 @@
+{
+  "name": "christmas-bingo-event-platform",
+  "version": "1.0.0",
+  "description": "Event-driven Christmas Bingo platform with ticket sales, unique access codes, and live gameplay. Built with React, Node.js, RabbitMQ, Postgres, Docker, and DDD/Hexagonal.",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -ws",
+    "build": "npm run build -ws",
+    "test": "npm run test -ws",
+    "lint": "npm run lint -ws",
+    "format": "npm run format -ws",
+    "docker:up": "docker compose -f infra/docker-compose.yml up -d",
+    "docker:down": "docker compose -f infra/docker-compose.yml down"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeffSkynird/christmas-bingo-event-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeffSkynird/christmas-bingo-event-platform/issues"
+  },
+  "homepage": "https://github.com/JeffSkynird/christmas-bingo-event-platform#readme"
+}
