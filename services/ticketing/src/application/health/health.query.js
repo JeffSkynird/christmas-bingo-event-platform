@@ -1,6 +1,11 @@
 class HealthQuery {
+  constructor({ dbPing }) {
+    this.dbPing = dbPing;
+  }
+
   async execute() {
-    return { status: "ok" };
+    await this.dbPing();
+    return { status: "ok", db: "ok" };
   }
 }
 
